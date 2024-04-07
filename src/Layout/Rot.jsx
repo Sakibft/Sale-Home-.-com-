@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Nav from "../components/Nav";
 
 
 const Rot = () => {
   return (
     <div>
-      <h1>hahahah</h1>
+     
       <Outlet></Outlet>
     </div>
   );
