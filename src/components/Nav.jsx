@@ -102,13 +102,13 @@ const Nav = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost btn-circle avatar tooltip"
+            className="btn btn-ghost btn-circle   tooltip"
             data-tip={n}
           >
             <div className="w-10 rounded-full">
-              <img
+              <img className="rounded-xl"
                 alt="Tailwind CSS Navbar component"
-                src="https://i.ibb.co/2tgKT7v/login.jpg"
+                src="https://i.ibb.co/9pt0k20/login.jpg"
               />
             </div>
           </div>

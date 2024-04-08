@@ -1,9 +1,53 @@
 import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
+import UseAuth from "../Hooks/UseAuth";
+import { ToastContainer  } from 'react-toastify';
 
 const Register = () => {
+  const {createUser}=UseAuth();
+ 
   const [showPassword, setShowPassword] = useState(false);
+  const [error,setError]=useState(''); 
+  const [sucess, setSuccess]=useState('');
+  if(sucess){
+     alert('added successfully')
+  }
+  if(error){
+    alert(error)
+  }
+  console.log(error);
+  console.log(sucess);
+  const handleRegister = e => {
+    // reset erro
+  setError('');
+  setSuccess('');
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const email = form.get('email');
+    const password = form.get('password');
+    if(password.length<6){
+      setError('Password should be at least 6 characters')
+      return ;
+    }
+    if (!/[A-Z]/.test(password)){
+      setError('Must have one uppercase letter  ')
+      return ;
+    }
+    if(!/[a-z]/.test(password)){
+      setError('Must have one lowercase letter')
+    }
+    console.log(password);
+    createUser(email,password)
+    .then(result => {
+       setSuccess(result)
+
+    })
+    .catch(error => {
+      setError(error.message)
+    })
+    console.log(email);
+  }
   return (
     <div className="container mx-auto">
       <div className="flex h-[700px] items-center justify-center ">
@@ -16,7 +60,7 @@ const Register = () => {
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-medium text-white/80 ">
-                Welcome to Homely~Habitats Back
+                Welcome Back to Homely~Habitats 
               </h2>
               <p className="animate-pulse text-sm text-white/60">
                 Please Enter You Information
@@ -28,24 +72,27 @@ const Register = () => {
             <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
               Register Here
             </h2>
-            <form className="flex  w-full flex-col items-center justify-center gap-4">
+            <form onSubmit={handleRegister} className="flex  w-full flex-col items-center justify-center gap-4">
               <input
                 className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
                 type="text"
                 placeholder="Name"
                 name="name"
+               
               />
               <input
                 className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
                 type="email"
                 placeholder="Email"
                 name="email"
+                required
               />
               <div className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%] flex justify-between">
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Password"
                   name="password"
+                  required
                 />
                 <div>
                   <span
@@ -100,6 +147,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
