@@ -22,8 +22,10 @@ const Register = () => {
         <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
             <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">Register Here</h2>
             <form className="flex  w-full flex-col items-center justify-center gap-4">
+                <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="text" placeholder="Name" name="name"/>
                 <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="email" placeholder="Email" name="email"/>
                 <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="password" placeholder="Password" name="password"/>
+                <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="text" placeholder="PhotoURL" name="photo"/>
                 <p className="text-[14px] text-gray-400">Do you have an account ? <Link to='/login' className="text-[#8EA7E9] underline">Login</Link ></p>
                 
                 <button className="btn w-[80%] rounded-lg bg-[#8EA7E9] px-6 py-2 font-medium text-white md:w-[60%]" >Register</button>
