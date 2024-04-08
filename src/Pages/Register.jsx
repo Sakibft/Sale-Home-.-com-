@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer,toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
@@ -12,10 +12,28 @@ const Register = () => {
   const [error, setError] = useState("");
   const [sucess, setSuccess] = useState("");
   if (sucess) {
-    alert("added successfully");
+    toast.success('?Successfully Created', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
   }
   if (error) {
-    alert(error);
+    toast.error(error, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
   }
   console.log(error);
   console.log(sucess);
@@ -136,6 +154,7 @@ const Register = () => {
                 Register
               </button>
             </form>
+        
             {/* divider  */}
             <div className="my-8 flex items-center px-8">
               <hr className="flex-1" />

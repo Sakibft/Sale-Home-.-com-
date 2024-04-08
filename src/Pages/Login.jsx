@@ -4,7 +4,7 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import UseAuth from "../Hooks/UseAuth";
 import { Helmet } from "react-helmet-async";
-
+import { ToastContainer,toast } from "react-toastify";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -12,10 +12,28 @@ const Login = () => {
   console.log(error);
   console.log(success);
   if (success) {
-    alert("success");
+    toast.success('Successfully added', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
   }
   if (error) {
-    alert(error);
+    toast.error(error, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
   }
   const { loginUser, loginWithGitHub, loginWithGoogle } = UseAuth();
   const handleLogin = (e) => {
@@ -169,6 +187,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

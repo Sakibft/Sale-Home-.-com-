@@ -1,6 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import UseAuth from "../Hooks/UseAuth";
 
 const Nav = () => {
+  const {user}=UseAuth();
+  console.log(user);
+
   const n = "Sakib Sarker";
   const navLinks = (
     <div className="space-x-8">
@@ -104,7 +108,9 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <div className="dropdown dropdown-end">
+        {
+          user ? <>
+             <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
             role="button"
@@ -121,11 +127,36 @@ const Nav = () => {
           <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
             <Link to="/login">
               <li>
-                <button className="btn btn-sm">Login</button>
+                <button className="btn btn-sm">Logout</button>
               </li>
             </Link>
           </ul>
         </div>
+          </>:
+            <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle   tooltip"
+              data-tip={n}
+            >
+              <div className="w-10 rounded-full">
+                <img className="rounded-xl"
+                  alt="Tailwind CSS Navbar component"
+                  src="https://i.ibb.co/9pt0k20/login.jpg"
+                />
+              </div>
+            </div>
+            <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
+              <Link to="/login">
+                <li>
+                  <button className="btn btn-sm">Login</button>
+                </li>
+              </Link>
+            </ul>
+          </div>
+        }
+      
       </div>
     </div>
   );
