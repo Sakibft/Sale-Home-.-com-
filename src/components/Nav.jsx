@@ -30,9 +30,9 @@ const Nav = () => {
             ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold text-xl  "
             : "font-semibold text-xl  "
         }
-        to="/extra"
+        to="/about"
       >
-        Extra
+        About Us
       </NavLink>
     </div>
   );
@@ -58,9 +58,10 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className=" dropdown-content  z-[1]   rounded-box flex w-48  justify-between"
           >
-            <NavLink
+           <li>
+           <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "text-[#8EA7FF]  border lg:px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold md:text-xl  "
@@ -70,7 +71,9 @@ const Nav = () => {
             >
               Home
             </NavLink>
-            <NavLink
+           </li>
+           <li>
+           <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold md:text-xl  "
@@ -78,21 +81,24 @@ const Nav = () => {
               }
               to="/update"
             >
-              Update Profile
+              Up-Profile
             </NavLink>
-            <NavLink
+           </li>
+           <li>
+           <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold md:text-xl  "
                   : "font-semibold md:text-xl  "
               }
-              to="/extra"
+              to="/about"
             >
-              Extra
+              About
             </NavLink>
+           </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Homely~Habitats </a>
+        <a className="btn btn-ghost text-xl">Sale~Home</a>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

@@ -3,58 +3,63 @@ import { Link } from "react-router-dom";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import UseAuth from "../Hooks/UseAuth";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [error,setError]=useState('');
-  const [success,setSuccess]=useState('');
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   console.log(error);
   console.log(success);
- if(success){
-  alert('success')
- }
- if(error){
-   alert(error)
- }
-  const {loginUser,loginWithGitHub,loginWithGoogle} = UseAuth();
-  const handleLogin = e =>{
+  if (success) {
+    alert("success");
+  }
+  if (error) {
+    alert(error);
+  }
+  const { loginUser, loginWithGitHub, loginWithGoogle } = UseAuth();
+  const handleLogin = (e) => {
     // login
-    e.preventDefault()
+    e.preventDefault();
     const form = new FormData(e.target);
-    const email = form.get('email');
-    const password = form.get('password');
-    setError('');
-    setSuccess('');
-    loginUser(email,password)
-    .then(result => {
-      setSuccess(result)
-    })
-    .catch(error => {
-      setError(error.message)
-    })
-  }
+    const email = form.get("email");
+    const password = form.get("password");
+    setError("");
+    setSuccess("");
+    loginUser(email, password)
+      .then((result) => {
+        setSuccess(result);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   // loginWithGitHub
-  const handleGitHub = () =>{
+  const handleGitHub = () => {
     loginWithGitHub()
-    .then(result => {
-       console.log(result.user);
-    })
-    .catch(error => {
-       console.error(error.message);
-    })
-  }
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
   // loginWithGoogle
-  const handleGoogle = () =>{
+  const handleGoogle = () => {
     loginWithGoogle()
-    .then(result => {
-    console.log(result.user)
-    })
-    .catch(error => {
-       console.error(error.message);
-    })
-  }
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
+
   return (
     <div>
+      <Helmet>
+        <title>sale home | login</title>
+      </Helmet>
       <div className="container mx-auto flex  items-center justify-center mt-12">
         <div className=" w-full overflow-hidden rounded-xl   flex justify-center items-center   lg:h-[80%] ">
           {/* input side  */}
@@ -62,7 +67,10 @@ const Login = () => {
             <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
               Login Now !
             </h2>
-            <form onSubmit={handleLogin} className="flex  w-full flex-col items-center justify-center gap-4">
+            <form
+              onSubmit={handleLogin}
+              className="flex  w-full flex-col items-center justify-center gap-4"
+            >
               <input
                 className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
                 type="email"
@@ -119,7 +127,7 @@ const Login = () => {
             {/* Social icons */}
             <div className="flex justify-center space-x-6 mt-3">
               <button
-              onClick={handleGoogle}
+                onClick={handleGoogle}
                 aria-label="Log in with Google"
                 className="p-3 rounded-full hover:bg-[#8EA7E9]"
               >
@@ -131,7 +139,8 @@ const Login = () => {
                   <path d="M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z"></path>
                 </svg>
               </button>
-              <button onClick={handleGitHub}
+              <button
+                onClick={handleGitHub}
                 aria-label="Log in with GitHub"
                 className="p-3 rounded-full hover:bg-[#8EA7E9]"
               >
@@ -156,7 +165,6 @@ const Login = () => {
                   <path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"></path>
                 </svg>
               </button>
-            
             </div>
           </div>
         </div>

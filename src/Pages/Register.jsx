@@ -2,54 +2,58 @@ import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
-import { ToastContainer  } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const {createUser}=UseAuth();
- 
+  const { createUser } = UseAuth();
+
   const [showPassword, setShowPassword] = useState(false);
-  const [error,setError]=useState(''); 
-  const [sucess, setSuccess]=useState('');
-  if(sucess){
-     alert('added successfully')
+  const [error, setError] = useState("");
+  const [sucess, setSuccess] = useState("");
+  if (sucess) {
+    alert("added successfully");
   }
-  if(error){
-    alert(error)
+  if (error) {
+    alert(error);
   }
   console.log(error);
   console.log(sucess);
-  const handleRegister = e => {
+  const handleRegister = (e) => {
     // reset erro
-  setError('');
-  setSuccess('');
+    setError("");
+    setSuccess("");
     e.preventDefault();
     const form = new FormData(e.target);
-    const email = form.get('email');
-    const password = form.get('password');
-    if(password.length<6){
-      setError('Password should be at least 6 characters')
-      return ;
+    const email = form.get("email");
+    const password = form.get("password");
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters");
+      return;
     }
-    if (!/[A-Z]/.test(password)){
-      setError('Must have one uppercase letter  ')
-      return ;
+    if (!/[A-Z]/.test(password)) {
+      setError("Must have one uppercase letter  ");
+      return;
     }
-    if(!/[a-z]/.test(password)){
-      setError('Must have one lowercase letter')
+    if (!/[a-z]/.test(password)) {
+      setError("Must have one lowercase letter");
     }
     console.log(password);
-    createUser(email,password)
-    .then(result => {
-       setSuccess(result)
-
-    })
-    .catch(error => {
-      setError(error.message)
-    })
+    createUser(email, password)
+      .then((result) => {
+        setSuccess(result);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
     console.log(email);
-  }
+  };
+
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <title>sale home | register</title>
+      </Helmet>
       <div className="flex h-[700px] items-center justify-center ">
         <div className="flex h-full w-full overflow-hidden rounded-xl shadow-md   ">
           {/* register design side  */}
@@ -60,7 +64,7 @@ const Register = () => {
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-medium text-white/80 ">
-                Welcome Back to Homely~Habitats 
+                Welcome Back to Homely_Habitats
               </h2>
               <p className="animate-pulse text-sm text-white/60">
                 Please Enter You Information
@@ -72,13 +76,15 @@ const Register = () => {
             <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
               Register Here
             </h2>
-            <form onSubmit={handleRegister} className="flex  w-full flex-col items-center justify-center gap-4">
+            <form
+              onSubmit={handleRegister}
+              className="flex  w-full flex-col items-center justify-center gap-4"
+            >
               <input
                 className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
                 type="text"
                 placeholder="Name"
                 name="name"
-               
               />
               <input
                 className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
