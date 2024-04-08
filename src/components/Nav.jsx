@@ -36,9 +36,10 @@ const Nav = () => {
         </div>
       </div>
       <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
-        <li>
-         <button className="btn"><Link to='/login'>LogIn</Link></button>
-        </li>
+       <Link to='/login'>
+       <li>
+         <button className="btn">Login</button>
+        </li></Link>
         
        
       </ul>
