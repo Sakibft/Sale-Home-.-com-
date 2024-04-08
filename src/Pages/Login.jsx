@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoMdEye } from "react-icons/io";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {
+  const [showPassword,setShowPassword]=useState(false)
   return (
     <div>
       <div className="container mx-auto flex  items-center justify-center">
@@ -17,12 +21,23 @@ const Login = () => {
                 placeholder="Email"
                 name="email"
               />
-              <input
-                className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
-                type="password"
+            <div  className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%] flex justify-between">
+            <input
+                type={showPassword? "text" : "password"}
                 placeholder="Password"
                 name="password"
               />
+             <div>
+               <span onClick={()=> setShowPassword(!showPassword)} className="z-10   ">{
+                showPassword?
+                <IoMdEye className="
+                text-gray-500 text-lg mt-1"  /> 
+                :<IoMdEyeOff className="
+                text-gray-500 text-lg mt-1" />
+               }</span>
+             </div>
+            </div>
+              
               <p className="text-[14px] text-gray-400">
                 Do not have an account ?  
                 <Link to="/register" className="text-[#8EA7E9] underline ml-1  "> 

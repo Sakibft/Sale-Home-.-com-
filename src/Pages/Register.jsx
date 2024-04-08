@@ -1,8 +1,11 @@
+import { useState } from "react";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 
  
 
 const Register = () => {
+  const [showPassword,setShowPassword]=useState(false)
   return (
    <div className="container mx-auto">
      <div className="flex h-[700px] items-center justify-center ">
@@ -24,7 +27,22 @@ const Register = () => {
             <form className="flex  w-full flex-col items-center justify-center gap-4">
                 <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="text" placeholder="Name" name="name"/>
                 <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="email" placeholder="Email" name="email"/>
-                <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="password" placeholder="Password" name="password"/>
+                <div  className="w-full rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%] flex justify-between">
+            <input
+                type={showPassword? "text" : "password"}
+                placeholder="Password"
+                name="password"
+              />
+             <div>
+               <span onClick={()=> setShowPassword(!showPassword)} className="z-10   ">{
+                showPassword?
+                <IoMdEye className="
+                text-gray-500 text-lg mt-1"  /> 
+                :<IoMdEyeOff className="
+                text-gray-500 text-lg mt-1" />
+               }</span>
+             </div>
+            </div>
                 <input className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]" type="text" placeholder="PhotoURL" name="photo"/>
                 <p className="text-[14px] text-gray-400">Do you have an account ? <Link to='/login' className="text-[#8EA7E9] underline">Login</Link ></p>
                 
