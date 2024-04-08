@@ -115,7 +115,7 @@ const Nav = () => {
           <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
             <Link to="/login">
               <li>
-                <button className="btn">Login</button>
+                <button className="btn btn-sm">Login</button>
               </li>
             </Link>
           </ul>
