@@ -38,8 +38,7 @@ const Banner = () => {
         </SwiperSlide>
         
       </Swiper>
-      {/* Discover a place */}
-{/* you'll love to live */}
+     
 
     </div>
     

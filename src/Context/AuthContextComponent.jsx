@@ -9,10 +9,9 @@ const AuthContextComponent = ({children}) =>
 const  [user,setUser] = useState(null);
 const [loading,setLoading] = useState(true);
  console.log(user);
-
- const fakeData = () => {
-  useEffect(/)
- }
+ 
+ 
+ 
 
   const createUser = (email,password)=>{
     setLoading(true);
@@ -41,8 +40,8 @@ const [loading,setLoading] = useState(true);
   useEffect(()=>{
  onAuthStateChanged(auth,currentUser => {
   if(currentUser){
-    setUser(currentUser)
     setLoading(false);
+    setUser(currentUser)
   }
  })
   },[]);
@@ -55,7 +54,8 @@ const [loading,setLoading] = useState(true);
      loginUser,
      loginWithGitHub,
      loginWithGoogle,
-     logOut
+     logOut,
+     loading
     };
   return (
     <HomeContext.Provider value={info}>

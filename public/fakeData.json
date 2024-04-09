@@ -1,0 +1,50 @@
+[
+  {
+    "estate_title": "Luxury Single-Family Home with Panoramic Views",
+    "id": 1,
+    "segment_name": "Residential",
+    "description": "This exquisite single-family home offers unparalleled luxury and stunning panoramic views. Featuring spacious living areas, gourmet kitchen, private pool, and lush landscaping, this home is perfect for those seeking the ultimate in comfort and elegance.",
+    "price": "$1,500,000",
+    "Status": "Sale",
+    "Area": "4000 sqft",
+    "location": "123 Main Street, Anytown, USA",
+    "facilities": ["living room", "swimming pool", "kitchen", "panoramic views"],
+    "image_url": "https://i.ibb.co/RBtbz0n/cottage-2955582-1280.jpg"
+  },
+  {
+    "estate_title": "Modern Townhouse in Prime Location",
+    "id": 2,
+    "segment_name": "Residential",
+    "description": "This modern townhouse offers contemporary design and convenience in a prime location. Featuring open floor plan, rooftop terrace, attached garage, and state-of-the-art appliances, this townhouse is ideal for urban living.",
+    "price": "$750,000",
+    "Status": "Sale",
+    "Area": "2500 sqft",
+    "location": "456 Oak Street, Cityville, USA",
+    "facilities": ["living room", "rooftop terrace", "attached garage", "modern kitchen"],
+    "image_url": "https://i.ibb.co/L6scvtt/istockphoto-1442148484-2048x2048.jpg"
+  },
+  {
+    "estate_title": "Luxury Apartment with Spectacular Views",
+    "id": 3,
+    "segment_name": "Residential",
+    "description": "This luxurious apartment offers breathtaking views and upscale amenities. Featuring floor-to-ceiling windows, gourmet kitchen, spa-inspired bathroom, and concierge services, this apartment provides the ultimate in urban living.",
+    "price": "$3,000/month",
+    "Status": "Rent",
+    "Area": "1500 sqft",
+    "location": "789 Maple Avenue, Metropolitan City, USA",
+    "facilities": ["living room", "gourmet kitchen", "concierge services", "spectacular views"],
+    "image_url": "https://i.ibb.co/p3X9cK4/hh.webp"
+  },
+  {
+    "estate_title": "Retirement Oasis: Senior Living Community",
+    "id": 4,
+    "segment_name": "Residential",
+    "description": "This senior living community offers a vibrant and engaging lifestyle for retirees. Featuring spacious apartments, wellness center, social activities, and on-site dining, residents can enjoy a fulfilling retirement experience.",
+    "price": "$4,500/month",
+    "Status": "Rent",
+    "Area": "1200 sqft",
+    "location": "101 Palm Drive, Senior Haven, USA",
+    "facilities": ["living room", "wellness center", "social activities", "on-site dining"],
+    "image_url": "https://i.ibb.co/XyFmSsk/pexels-pixabay-164558.jpg"
+  }
+]
