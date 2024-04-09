@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+ 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -14,7 +13,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
   return (
-    <div className='container mx-auto mt-12'>
+    <div className='container mx-auto mt-8'>
      
        <Swiper
         slidesPerView={1}
@@ -41,7 +40,9 @@ const Banner = () => {
       </Swiper>
       {/* Discover a place */}
 {/* you'll love to live */}
+
     </div>
+    
   );
 };
 

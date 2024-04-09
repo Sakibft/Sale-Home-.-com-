@@ -1,11 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
-
+import { useState } from "react";
 const Nav = () => {
-  const {user}=UseAuth();
-  console.log(user);
+  
+  const [success,setSuccess] = useState();
+  if(success){
+  return  <Link to='/'></Link>
+  }
+  const [error,setError]= useState()
+  console.log(success);
+  console.log(error);
+  const {user,logOut}=UseAuth();
+  // console.log(user);
+const handleLogOut = () =>{
+  logOut()
+  .then(result => {
+setSuccess(result.user)
 
-  const n = "Sakib Sarker";
+  })
+  .catch(error => {
+    setError(error.message)
+  })
+}
+ 
   const navLinks = (
     <div className="space-x-8">
       <NavLink
@@ -108,40 +125,41 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
+        {/* dainami login logout */}
         {
           user ? <>
-             <div className="dropdown dropdown-end">
+             <div className="dropdown dropdown-end mt-1">
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost btn-circle   tooltip"
-            data-tip={n}
+            className=" tooltip"
+            data-tip={user.email}
           >
             <div className="w-10 rounded-full">
-              <img className="rounded-xl"
-                alt="Tailwind CSS Navbar component"
-                src="https://i.ibb.co/9pt0k20/login.jpg"
+              <img  className="rounded-full w-full"
+                alt="nai"
+                src={user?.photoURL || 'Nai'}
               />
             </div>
           </div>
-          <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
-            <Link to="/login">
+          <ul tabIndex={0} className=" dropdown-content bg-base-100    ">
+            <Link>
               <li>
-                <button className="btn btn-sm">Logout</button>
+                <button onClick={handleLogOut} className="btn btn-sm bg-[#8EA7FF] text-white">Logout</button>
               </li>
             </Link>
           </ul>
         </div>
           </>:
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end mt-1">
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost btn-circle   tooltip"
-              data-tip={n}
+              className=" tooltip"
+              data-tip={'Please login'}
             >
               <div className="w-10 rounded-full">
-                <img className="rounded-xl"
+                <img className="rounded-full"
                   alt="Tailwind CSS Navbar component"
                   src="https://i.ibb.co/9pt0k20/login.jpg"
                 />
@@ -150,7 +168,7 @@ const Nav = () => {
             <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
               <Link to="/login">
                 <li>
-                  <button className="btn btn-sm">Login</button>
+                  <button className="btn btn-sm bg-[#8EA7FF] text-white">Login</button>
                 </li>
               </Link>
             </ul>
