@@ -38,12 +38,16 @@ const [loading,setLoading] = useState(true);
    }
 
   useEffect(()=>{
- onAuthStateChanged(auth,currentUser => {
+const unSubsCribe = onAuthStateChanged(auth,currentUser => {
   if(currentUser){
-    setLoading(false);
     setUser(currentUser)
+    setLoading(false);
   }
- })
+ });
+ return ()  => {
+  unSubsCribe();
+ }
+
   },[]);
  
 

@@ -143,11 +143,11 @@ setSuccess(result.user)
             </div>
           </div>
           <ul tabIndex={0} className=" dropdown-content bg-base-100    ">
-            <Link>
+            
               <li>
                 <button onClick={handleLogOut} className="btn btn-sm bg-[#8EA7FF] text-white">Logout</button>
               </li>
-            </Link>
+           
           </ul>
         </div>
           </>:

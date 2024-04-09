@@ -9,6 +9,7 @@ const Rot = () => {
         <Nav></Nav>
       <Outlet></Outlet>
       <Footer></Footer>
+     
     </div>
   );
 };

@@ -9,6 +9,8 @@ import Register from "../Pages/Register";
 import About from "../Pages/About/About";
 import Viewproperty from "../Pages/View Property/Viewproperty";
 import PrivateRoute from "./PrivateRoute";
+import AboutPrivate from "./AboutPrivate";
+import UpPrivate from "./UpPrivate";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,11 @@ const router = createBrowserRouter([
 },
 {
   path:'/update',
-  element:<UpdateProfile></UpdateProfile>
+  element:
+  <UpPrivate>
+    <UpdateProfile></UpdateProfile>
+  </UpPrivate>
+  
 },
 {
   path:'/login',
@@ -35,13 +41,18 @@ const router = createBrowserRouter([
 },
 {
   path:'/about',
-  element:<About></About>
+  element:
+  <AboutPrivate>
+    <About></About>
+  </AboutPrivate>
 },
 {
   path:'/item/:id',
-  element:<PrivateRoute>
+  element:
+  <PrivateRoute>
     <Viewproperty></Viewproperty>
-  </PrivateRoute>
+  </PrivateRoute>,
+  loader:()=> fetch('/fakeData.json')
 }
     ]
   },
