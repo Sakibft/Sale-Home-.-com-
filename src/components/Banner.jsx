@@ -13,7 +13,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
   return (
-    <div className='container mx-auto mt-8'>
+    <div data-aos="zoom-in" data-aos-duration="1000" className='container mx-auto mt-8'>
      
        <Swiper
         slidesPerView={1}

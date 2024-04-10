@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
 import { ToastContainer,toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+ 
 
 const Register = () => {
   const { createUser } = UseAuth();
@@ -12,7 +13,7 @@ const Register = () => {
   const [error, setError] = useState("");
   const [sucess, setSuccess] = useState("");
   if (sucess) {
-    toast.success('?Successfully Created', {
+    toast.success('Register Completed', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -55,6 +56,7 @@ const Register = () => {
     }
     if (!/[a-z]/.test(password)) {
       setError("Must have one lowercase letter");
+      return;
     }
     console.log(password);
     createUser(email, password)
@@ -81,7 +83,7 @@ const Register = () => {
             <div className="absolute -right-7 top-[50%] h-14 w-14 -translate-y-1/2 rounded-full bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd] transition-all"></div>
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
             <div className="space-y-2 text-center">
-              <h2 className="text-3xl font-medium text-white/80 ">
+              <h2 className="text-3xl font-medium text-white/80">
                 Welcome Back to Sale ~ Home
               </h2>
               <p className="animate-pulse text-sm text-white/60">
@@ -91,7 +93,7 @@ const Register = () => {
           </div>
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
-            <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
+            <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9] ">
               Register Here
             </h2>
             <form
@@ -156,7 +158,7 @@ const Register = () => {
             </form>
         
             {/* divider  */}
-            <div className="my-8 flex items-center px-8">
+          <div className="my-8 flex items-center px-8">
               <hr className="flex-1" />
               <div className="mx-4 text-gray-400">OR</div>
               <hr className="flex-1" />

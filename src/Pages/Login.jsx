@@ -12,7 +12,7 @@ const Login = () => {
   console.log(error);
   console.log(success);
   if (success) {
-    toast.success('Successfully added', {
+    toast.success('Successfully login', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,

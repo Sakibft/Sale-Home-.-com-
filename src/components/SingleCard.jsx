@@ -20,7 +20,7 @@ const SingleCard = ({item}) => {
     <div className="container mx-auto ">
      
       <div>
-      <div className="card lg:w-full h-[500px] bg-base-100 shadow-xl transition duration-300 transform hover:scale-105">
+      <div  className="card lg:w-full h-[500px] bg-base-100 shadow-xl transition duration-300 transform hover:scale-105">
   <figure><img src={image_url} alt="Shoes" /></figure>
   <div className="p-4">
     <h2 className="card-title text-blue-500 mb-2">{price}</h2>

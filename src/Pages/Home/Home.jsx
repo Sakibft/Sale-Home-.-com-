@@ -15,8 +15,8 @@ const Home = () => {
       <div className="container mx-auto flex justify-center mt-6">
         <div>
           <h1></h1>
-          <h1 className="text-2xl text-center font-bold">
-            {" "}
+          <h1  className="text-2xl text-center font-bold">
+             
             Discover a place you will love to live
           </h1>
           <p className="text-center">
