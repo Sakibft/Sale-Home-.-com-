@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>sale home ~ home</title>
+        <title>Sale ~ Home</title>
       </Helmet>
       <Banner></Banner>
       <div className="container mx-auto flex justify-center mt-6">

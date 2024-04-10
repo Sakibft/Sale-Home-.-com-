@@ -3,7 +3,7 @@ import img from "../../assets/about.png";
 
 const About = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-4">
       <Helmet>
         <title>sale home | about</title>
       </Helmet>
@@ -79,7 +79,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="grid"></div>
+     
     </div>
   );
 };

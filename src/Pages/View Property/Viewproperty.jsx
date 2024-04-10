@@ -28,7 +28,7 @@ const Viewproperty = () => {
         <title>sale home ~ details</title>
       </Helmet>
       <div className="container mx-auto">
-     <h1 className="text-center font-bold text-3xl mt-2">Everything You Need to Know About Home !</h1>
+     <h1 className="text-center font-bold text-3xl mt-2 text-blue-400">Everything You Need to Know About Home !</h1>
       </div>
      <div className="container mx-auto flex justify-center items-center mb-28 mt-8 ">
   
