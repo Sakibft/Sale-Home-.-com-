@@ -4,10 +4,10 @@ import { useState } from "react";
 const Nav = () => {
   
   const [success,setSuccess] = useState();
+  const [error,setError]= useState();
   if(success){
   return  <Link to='/'></Link>
   }
-  const [error,setError]= useState();
   console.log(success);
   console.log(error);
   const {user,logOut}=UseAuth();
