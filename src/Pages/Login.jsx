@@ -78,7 +78,7 @@ const Login = () => {
       <Helmet>
         <title>sale home | login</title>
       </Helmet>
-      <div className="container mx-auto flex  h-[700px] items-center justify-center mt-8 border rounded-2xl shadow-xl">
+      <div className="container mx-auto flex  h-[700px] items-center justify-center mb-10 mt-4 border hover:border-blue-300 rounded-2xl shadow-xl">
         <div className=" w-full overflow-hidden rounded-xl   flex justify-center items-center   lg:h-[80%] ">
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">

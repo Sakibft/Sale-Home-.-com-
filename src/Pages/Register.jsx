@@ -72,7 +72,7 @@ const Register = () => {
       <Helmet>
         <title>sale home | register</title>
       </Helmet>
-      <div className="flex h-[700px] border rounded-xl items-center justify-center shadow-xl ">
+      <div className="flex h-[700px] border hover:border-blue-300 rounded-xl items-center justify-center shadow-xl mb-8 ">
         <div className="flex h-full w-full overflow-hidden rounded-xl shadow-md   ">
           {/* register design side  */}
           <div className="relative hidden h-full items-center justify-center bg-[#8EA7E9] md:flex md:w-[60%] lg:w-[40%]">
@@ -140,7 +140,7 @@ const Register = () => {
               <input
                 className="w-[80%] rounded-lg border border-[#8EA7E9] px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#8EA7E9]/50 md:w-[60%]"
                 type="text"
-                placeholder="PhotoURL"
+                placeholder="PhotoUrl"
                 name="photo"
               />
               <p className="text-[14px] text-gray-400">

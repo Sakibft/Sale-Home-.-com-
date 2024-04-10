@@ -8,8 +8,8 @@ const About = () => {
         <title>sale home | about</title>
       </Helmet>
 
-      <div className=" grid lg:grid-cols-4">
-        <div className="col-span-2">
+      <div className=" grid md:grid-cols-4">
+        <div className="col-span-2 md:mt-10">
           <img  src={img} alt="" />
         </div>
         <div className="col-span-2">

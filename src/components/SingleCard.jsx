@@ -1,7 +1,18 @@
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
+{/* <div class="card-container">
+  <div class="card overflow-hidden border border-gray-200 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+    <img src="card-image.jpg" alt="Card Image" class="w-full">
+    <div class="card-content p-4">
+      <h2 class="card-title text-xl font-bold mb-2">Card Title</h2>
+      <p class="card-text text-gray-700">Card Description</p>
+      <button class="card-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+        Button
+      </button>
+    </div>
+  </div>
+</div> */}
 
 const SingleCard = ({item}) => {
   const {id, estate_title,image_url,segment_name,description,price,Status,Area,location,facilities}=item;
@@ -9,7 +20,7 @@ const SingleCard = ({item}) => {
     <div className="container mx-auto ">
      
       <div>
-      <div className="card lg:w-full h-[500px] bg-base-100 shadow-xl">
+      <div className="card lg:w-full h-[500px] bg-base-100 shadow-xl transition duration-300 transform hover:scale-105">
   <figure><img src={image_url} alt="Shoes" /></figure>
   <div className="p-4">
     <h2 className="card-title text-blue-500 mb-2">{price}</h2>
@@ -21,13 +32,14 @@ const SingleCard = ({item}) => {
     
       }
     </p>
-    <p className="mt-1 text-blue-400">
+    <p className="font-semibold mt-1" >
       Segment : 
-      { segment_name}
+      <span className=" text-sm">  {segment_name}</span>  
     </p>
-    <p className="mt-1 text-blue-400">
-      Segment : 
-      {Status}
+    <p className="font-semibold mt-1">
+      For :
+      <span className="text-blue-400">  {Status}</span>  
+    
     </p>
 
 

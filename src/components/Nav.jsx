@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
 import { useState } from "react";
+import ig from '../assets/alskd.png'
 const Nav = () => {
   
   const [success,setSuccess] = useState();
@@ -58,7 +59,7 @@ setSuccess(result.user)
     </div>
   );
   return (
-    <div className="navbar bg-base-100 mt-8 container mx-auto">
+    <div className="navbar bg-base-100 mt-5 container mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -119,7 +120,7 @@ setSuccess(result.user)
            </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl">Sale <span className="text-[#8EA7FF]">~</span> Home</a>
+        <a className="btn btn-ghost text-2xl">Sale <span className="text-[#8EA7FF]">~</span> Home </a>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
