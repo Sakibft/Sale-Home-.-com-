@@ -78,7 +78,7 @@ const Login = () => {
       <Helmet>
         <title>sale home | login</title>
       </Helmet>
-      <div className="container mx-auto flex  items-center justify-center mt-12">
+      <div className="container mx-auto flex  h-[700px] items-center justify-center mt-8 border rounded-2xl shadow-xl">
         <div className=" w-full overflow-hidden rounded-xl   flex justify-center items-center   lg:h-[80%] ">
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
@@ -131,7 +131,7 @@ const Login = () => {
                 </Link>
               </p>
 
-              <button className="btn w-[80%] rounded-lg bg-[#8EA7E9] px-6 py-2 font-medium text-white md:w-[60%]">
+              <button className="btn w-[80%] rounded-lg bg-[#8EA7E9] px-6 py-2 font-medium text-white md:w-[60%] text-xl">
                 Login
               </button>
             </form>

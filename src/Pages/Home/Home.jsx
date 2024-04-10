@@ -13,10 +13,20 @@ const Home = () => {
       </Helmet>
       <Banner></Banner>
       <div className="container mx-auto flex justify-center mt-6">
-        <h1> Discover a place
-you will love to live</h1>
+        <div>
+          <h1></h1>
+          <h1 className="text-2xl text-center font-bold">
+            {" "}
+            Discover a place you will love to live
+          </h1>
+          <p className="text-center">
+            Escape to a serene haven, where natures embrace and cozy comforts
+            intertwine, <br /> offering a perfect sanctuary for your cherished
+            moments.
+          </p>
+        </div>
       </div>
-    <div className="container mx-auto mt-4 grid lg:grid-cols-4 md:grid-cols-2  gap-4 mb-12 p-1">
+      <div className="container mx-auto mt-4 grid lg:grid-cols-4 md:grid-cols-2  gap-4 mb-12 p-1">
         {homeData.map((item) => (
           <SingleCard key={item.id} item={item}></SingleCard>
         ))}

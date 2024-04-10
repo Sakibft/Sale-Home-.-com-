@@ -28,8 +28,8 @@ setSuccess(result.user)
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-[#8EA7FF]  border lg:px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold text-xl  "
-            : "font-semibold text-xl  "
+            ? "text-white  lg:px-2 py-1 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
         }
         to="/"
       >
@@ -38,8 +38,8 @@ setSuccess(result.user)
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold text-xl  "
-            : "font-semibold text-xl  "
+            ?  "text-white  lg:px-2 py-1 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
         }
         to="/update"
       >
@@ -48,8 +48,8 @@ setSuccess(result.user)
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold text-xl  "
-            : "font-semibold text-xl  "
+            ? "text-white  lg:px-2 py-1 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
         }
         to="/about"
       >
@@ -119,7 +119,7 @@ setSuccess(result.user)
            </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Sale~Home</a>
+        <a className="btn btn-ghost text-2xl">Sale <span className="text-[#8EA7FF]">~</span> Home</a>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

@@ -72,7 +72,7 @@ const Register = () => {
       <Helmet>
         <title>sale home | register</title>
       </Helmet>
-      <div className="flex h-[700px] items-center justify-center ">
+      <div className="flex h-[700px] border rounded-xl items-center justify-center shadow-xl ">
         <div className="flex h-full w-full overflow-hidden rounded-xl shadow-md   ">
           {/* register design side  */}
           <div className="relative hidden h-full items-center justify-center bg-[#8EA7E9] md:flex md:w-[60%] lg:w-[40%]">
@@ -82,7 +82,7 @@ const Register = () => {
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-medium text-white/80 ">
-                Welcome Back to Homely_Habitats
+                Welcome Back to Sale ~ Home
               </h2>
               <p className="animate-pulse text-sm text-white/60">
                 Please Enter You Information
@@ -150,7 +150,7 @@ const Register = () => {
                 </Link>
               </p>
 
-              <button className="btn w-[80%] rounded-lg bg-[#8EA7E9] px-6 py-2 font-medium text-white md:w-[60%]">
+              <button className="btn w-[80%] rounded-lg bg-[#8EA7E9] px-6 py-2 font-medium text-white text-xl md:w-[60%]">
                 Register
               </button>
             </form>
