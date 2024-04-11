@@ -1,6 +1,14 @@
-  Website Name : Sale Home
+  Website Name => Sale~Home
  
-      Live site :  https://b9a9-cc073.web.app/
+      Live site =>  https://b9a9-cc073.web.app/
+
+
+
+      Npm package name =>
+
+ 1. AOS Package,
+    2. Animate.css,
+         3, Swiper slider,
  
 
 Five bullet Point features about my website 
@@ -18,8 +26,3 @@ Five bullet Point features about my website
 
 
 
-Npm package name 
-
- 1. AOS Package,
-    2. Animate.css,
-         3, Swiper slider,

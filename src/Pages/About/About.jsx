@@ -16,7 +16,11 @@ const About = () => {
           <h1
             className=" text-3xl font-semibold
       
-        text-blue-400"
+        text-blue-400
+        animate__animated
+        animate__bounceInDown
+        "
+       
           >
             Welcome to you Home~Sale
           </h1>

@@ -78,11 +78,11 @@ const Login = () => {
       <Helmet>
         <title>sale home | login</title>
       </Helmet>
-      <div className="container mx-auto flex  h-[700px] items-center justify-center mb-10 mt-4 border hover:border-blue-300 rounded-2xl shadow-xl">
+      <div data-aos="fade-up"  data-aos-duration="1000" className="container mx-auto flex  h-[700px] items-center justify-center mb-10 mt-4 border hover:border-blue-300 duration-1000 rounded-2xl shadow-xl">
         <div className=" w-full overflow-hidden rounded-xl   flex justify-center items-center   lg:h-[80%] ">
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
-            <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
+            <h2  data-aos="fade-down"  data-aos-duration="1000" className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
               Login Now !
             </h2>
             <form

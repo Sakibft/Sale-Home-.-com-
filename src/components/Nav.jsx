@@ -134,7 +134,7 @@ const Nav = () => {
              <div className="w-10 border hover:border-blue-500 rounded-full">
              <img  className="rounded-full w-full"
                   alt="nai"
-                  src={user?.photoURL || 'Nai'}
+                  src={user?.photoURL}
                 />
 
              </div>

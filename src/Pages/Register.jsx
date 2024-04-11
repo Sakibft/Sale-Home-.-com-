@@ -74,7 +74,7 @@ const Register = () => {
       <Helmet>
         <title>sale home | register</title>
       </Helmet>
-      <div className="flex h-[700px] border hover:border-blue-300 rounded-xl items-center justify-center shadow-xl mb-8 ">
+      <div  data-aos="fade-up"  data-aos-duration="1000"  className="flex h-[700px] border hover:border-blue-300 rounded-xl items-center justify-center shadow-xl mb-8 ">
         <div className="flex h-full w-full overflow-hidden rounded-xl shadow-md   ">
           {/* register design side  */}
           <div className="relative hidden h-full items-center justify-center bg-[#8EA7E9] md:flex md:w-[60%] lg:w-[40%]">
@@ -93,7 +93,7 @@ const Register = () => {
           </div>
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
-            <h2 className="pb-8 text-center text-3xl font-bold text-[#8EA7E9] ">
+            <h2  data-aos="fade-down"  data-aos-duration="1000"  className="pb-8 text-center text-3xl font-bold text-[#8EA7E9] ">
               Register Here
             </h2>
             <form

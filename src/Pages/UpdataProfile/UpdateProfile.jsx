@@ -1,8 +1,15 @@
 import { Helmet } from "react-helmet-async";
 import UseAuth from "../../Hooks/UseAuth";
 import ks from "../../assets/aldj.png"
+import { useState } from "react";
 const UpdateProfile = () => {
+  const [name,setName]=useState()
   const {user}=UseAuth();
+ 
+  const handleName = e => {
+   setName(e.target.value);
+
+  }
   return (
     <div className="container mx-auto">
       <Helmet>
@@ -25,6 +32,7 @@ const UpdateProfile = () => {
                   type="text"
                   value={user?.displayName}
                   name="name"
+                  onChange={handleName}
                 />
                 <label htmlFor="username" className="block ">
                 Email

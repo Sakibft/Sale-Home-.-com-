@@ -7,18 +7,19 @@ const Home = () => {
   const homeData = useLoaderData();
   console.log(homeData);
   return (
-    <div>
+    <div className="mt-22">
       <Helmet>
         <title>Sale ~ Home</title>
       </Helmet>
       <Banner></Banner>
-      <div className="container mx-auto flex justify-center mt-6">
+      <div className ="container mx-auto flex justify-center mt-12">
         <div>
           <h1></h1>
-          <h1  className="text-2xl text-center font-bold">
+          <h1  className="text-2xl text-center font-bold animate__animated animate__pulse">
              
             Discover a place you will love to live
           </h1>
+         
           <p className="text-center">
             Escape to a serene haven, where natures embrace and cozy comforts
             intertwine, <br /> offering a perfect sanctuary for your cherished
