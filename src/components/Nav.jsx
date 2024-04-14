@@ -11,6 +11,7 @@ const Nav = () => {
   console.log(success);
   console.log(error);
   const { user, logOut } = UseAuth();
+  console.log(user?.photoURL);
   // console.log(user);
   const handleLogOut = () => {
     logOut()
@@ -133,18 +134,18 @@ const Nav = () => {
               <div tabIndex={0} role="button" className=" m-1">
              <div className="w-10 border hover:border-blue-500 rounded-full">
              <img  className="rounded-full w-full"
-                  alt="nai"
                   src={user?.photoURL}
+                  alt="nai"
                 />
 
              </div>
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[10] menu shadow bg-base-100 rounded-box "
+                className="dropdown-content z-[10] menu shadow bg-base-100 rounded-box w-32 "
               >
                     <li className=" rounded-md bg-[#8EA7FF] text-white">
-                  <p>{user?.email}</p>
+                  <p>{user?.displayName}</p>
                 </li>
                 <li>
                 <button onClick={handleLogOut} className="btn btn-sm bg-[#8EA7FF] text-white w-16">Logout</button>
