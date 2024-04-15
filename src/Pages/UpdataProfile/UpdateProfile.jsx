@@ -49,9 +49,11 @@ const UpdateProfile = () => {
 
       <div className="w-full mx-auto my-12 p-6 bg-white shadow-md sm:px-8 sm:py-10 lg:px-12 lg:py-16 border  hover:border-blue-300 duration-1000 rounded-xl mb-40  mt-20">
         <div className="flex flex-col sm:flex-row justify-between space-x-0 sm:space-x-12">
-          <div className="w-full sm:w-1/2 mb-8 sm:mb-0 ">
+          <div data-aos="fade-down"   data-aos-duration="1000" className="w-full sm:w-1/2 mb-8 sm:mb-0 ">
             {/* Left side form */}
-            <h2 className="text-2xl text-center font-bold mb-6">
+            <h2  className="text-3xl text-center font-bold mb-6 animate__animated animate__pulse text-[#8EA7FF] "
+             style={{animationDelay: '1s' }}
+            >
               Update your Profile
             </h2>
             <form onSubmit={handleform}>
@@ -99,7 +101,7 @@ const UpdateProfile = () => {
             </form>
           </div>
           {/* Right side content */}
-          <div className="w-full sm:w-1/2">
+          <div  data-aos="fade-up"   data-aos-duration="1000" className="w-full sm:w-1/2">
             <img src={ks} alt="" />
           </div>
         </div>

@@ -32,7 +32,7 @@ const Nav = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-white  lg:px-2 py-1 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            ? "text-white  lg:px-2 py-2 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
         to="/"
@@ -42,7 +42,7 @@ const Nav = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-white  lg:px-2 py-1 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            ? "text-white  lg:px-2 py-2 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
         to="/update"
@@ -52,7 +52,7 @@ const Nav = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "text-white  lg:px-2 py-1 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            ? "text-white  lg:px-2 py-2 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
         to="/about"
@@ -124,7 +124,7 @@ const Nav = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-          Sale <span className="text-[#8EA7FF]">~</span> Home{" "}
+           Sale <span className="text-[#8EA7FF]">~</span> Home{" "}
         </a>
       </div>
       <div className="navbar-center hidden md:flex">

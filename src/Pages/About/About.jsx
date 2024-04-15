@@ -9,17 +9,19 @@ const About = () => {
       </Helmet>
 
       <div className=" grid md:grid-cols-4">
-        <div className="col-span-2 md:mt-10">
+        <div data-aos="fade-right"    data-aos-duration="2000"  className="col-span-2 md:mt-10">
           <img  src={img} alt="" />
         </div>
-        <div className="col-span-2">
-          <h1
+        <div data-aos="fade-left"    data-aos-duration="2000" className="col-span-2">
+          <h1 
             className=" text-3xl font-semibold
       
-        text-blue-400
+            text-[#8EA7FF]
         animate__animated
-        animate__bounceInDown
+        animate__flash
+      
         "
+        style={{ animationDuration: '2s', animationDelay: '2s' }}
        
           >
             Welcome to you Home~Sale

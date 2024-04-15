@@ -33,15 +33,17 @@ const Viewproperty = () => {
      <div  data-aos="fade-up" data-aos-duration="1000" className="container mx-auto flex justify-center items-center mb-28 mt-8 ">
   
       
-      <div className="card lg:card-side bg-base-100 shadow-xl md:w-full w-full hover:border border-blue-400">
-        <figure>
+      <div className="card lg:card-side bg-base-100 shadow-xl md:w-full w-full  border  hover:border-blue-300 duration-1000">
+        <figure data-aos="fade-right"  data-aos-delay="100"
+    data-aos-duration="1000">
           <img
             className="w-full h-[500px] rounded-xl"
             src={data?.image_url}
             alt="Album"
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body" data-aos="fade-left"  data-aos-delay="100"
+    data-aos-duration="1000">
           <div className="flex gap-3">
             <IoHome className="text-3xl text-blue-400" />
 
@@ -91,7 +93,7 @@ const Viewproperty = () => {
      
        
           <hr />
-          <h1 className="font-semibold">More details about this property</h1>
+          <h1 className="font-semibold">More details about this property :</h1>
           <p className="mt-[-4px]">{data?.description}</p>
           <div className="card-actions justify-end">
             <button className="btn text-white bg-[#8EA7FF] border-[#8EA7FF]">
@@ -103,44 +105,7 @@ const Viewproperty = () => {
         </div>
       </div>
 
-      {/* <div className="mt-6 flex justify-center items-center">
-        <div className="card card-compact w-[800px]  bg-base-100 shadow-xl">
-          <figure>
-            <img src={data?.image_url} />
-          </figure>
-          <div className="card-body">
-            <div className="flex gap-3">
-              <IoHome className="text-3xl" />
-
-              <h2 className="card-title">{data?.estate_title}</h2>
-            </div>
-            <div className="border"></div>
-            <h2>
-              For: <span className="text-green-500">{data?.Status}</span>{" "}
-            </h2>
-
-            <h2 className="card-title">{data?.price}</h2>
-            <p className="flex gap-2">
-              Area ~{data?.Area}
-              <GiRapidshareArrow className="mt-1 text-blue-500" />
-            </p>
-            <p className="w-16">
-              Facilities <FaAngleDown className="mt-1" />
-            </p>
-            <ul>
-              <li>{data?.facilities?.[0]}</li>
-              <li>{data?.facilities?.[1]}</li>
-              <li>{data?.facilities?.[2]}</li>
-              <li>{data?.facilities?.[3]}</li>
-            </ul>
-            <h1 className="flex gap-2">
-              Location: {data?.location} <MdLocationPin className="text-xl" />
-            </h1>
-            <h1>Details about this property</h1>
-            <p>{data?.description}</p>
-          </div>
-        </div>
-      </div> */}
+ 
     </div>
  </div>
   );

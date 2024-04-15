@@ -12,14 +12,16 @@ const Home = () => {
         <title>Sale ~ Home</title>
       </Helmet>
       <Banner></Banner>
-      <div className ="container mx-auto flex justify-center mt-12">
+      <div className="container mx-auto flex justify-center mt-12">
         <div>
           <h1></h1>
-          <h1  className="text-2xl text-center font-bold animate__animated animate__pulse">
-             
+          <h1
+            className="text-2xl text-center font-bold animate__animated animate__pulse"
+            style={{ animationDelay: "1s" }}
+          >
             Discover a place you will love to live !
           </h1>
-         
+
           <p className="text-center">
             Escape to a serene haven, where natures embrace and cozy comforts
             intertwine, <br /> offering a perfect sanctuary for your cherished
