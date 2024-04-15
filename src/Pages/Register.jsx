@@ -23,6 +23,7 @@ const Register = () => {
       progress: undefined,
       theme: "light",
       }); 
+ 
   }
   if (error) {
     toast.error(error, {

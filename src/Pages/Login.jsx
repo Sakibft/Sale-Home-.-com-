@@ -9,8 +9,14 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [googleLogin,setGoogleLogin]=useState("");
+  const [googleError,setGoogleError]=useState("");
+  const [githublogin,setGithubLogin]=useState("");
+  const [githuberror,setGithubError]=useState("");
+  const { loginUser, loginWithGitHub, loginWithGoogle } = UseAuth();
   console.log(error);
   console.log(success);
+  // email and password
   if (success) {
     toast.success('Successfully login', {
       position: "top-right",
@@ -35,7 +41,58 @@ const Login = () => {
       theme: "light",
       }); 
   }
-  const { loginUser, loginWithGitHub, loginWithGoogle } = UseAuth();
+  // google
+  if(googleLogin){
+    toast.success('Successfully login with google', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
+  }
+  if(googleError){
+    toast.error(error, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
+  }
+  //  github 
+  if(githublogin){
+    toast.success('Successfully login with github', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
+  }
+  if(githuberror){
+    toast.success( githuberror, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      }); 
+  }
+
+  console.log(loginUser);
   const handleLogin = (e) => {
     // login
     e.preventDefault();
@@ -56,20 +113,20 @@ const Login = () => {
   const handleGitHub = () => {
     loginWithGitHub()
       .then((result) => {
-        console.log(result.user);
+         setGithubLogin(result.user);
       })
       .catch((error) => {
-        console.error(error.message);
+         setGithubError(error.message);
       });
   };
   // loginWithGoogle
   const handleGoogle = () => {
     loginWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        setGoogleLogin(result.user);
       })
       .catch((error) => {
-        console.error(error.message);
+        setGoogleError(error.message);
       });
   };
 

@@ -2,21 +2,25 @@ import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
 import { useState } from "react";
 import ig from "../assets/alskd.png";
+
 const Nav = () => {
+ 
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
+  const { user, logOut,loading } = UseAuth();
   if (success) {
     return <Link to="/"></Link>;
   }
   console.log(success);
   console.log(error);
-  const { user, logOut } = UseAuth();
+ 
   console.log(user?.photoURL);
   // console.log(user);
   const handleLogOut = () => {
     logOut()
       .then((result) => {
         setSuccess(result.user);
+        
       })
       .catch((error) => {
         setError(error.message);
@@ -128,6 +132,7 @@ const Nav = () => {
       </div>
       <div className="navbar-end">
         {/* dainami login logout */}
+    
         {
           user ? (
             <div className="dropdown dropdown-hover">
@@ -157,8 +162,8 @@ const Nav = () => {
           ) : (
             <div className="dropdown dropdown-hover">
               <div tabIndex={0} role="button" className=" m-1">
-            <div className="w-10">
-            <img  className="rounded-full"
+            <div className="w-10 ">
+            <img  className="rounded-full "
                     alt="Tailwind CSS Navbar component"
                     src="https://i.ibb.co/9pt0k20/login.jpg"/>
             </div>
@@ -176,52 +181,7 @@ const Nav = () => {
               </ul>
             </div>
           )
-          //   <>
-          //      <div className="dropdown dropdown-end mt-1">
-          //   <div
-          //     tabIndex={0}
-          //     role="button"
-          //     className=" tooltip"
-          //     data-tip={user.email}
-          //   >
-          //     <div className="w-10 rounded-full">
-          //       <img  className="rounded-full w-full"
-          //         alt="nai"
-          //         src={user?.photoURL || 'Nai'}
-          //       />
-          //     </div>
-          //   </div>
-          //   <ul tabIndex={0} className=" dropdown-content bg-base-100    ">
-
-          //       <li>
-          //         <button onClick={handleLogOut} className="btn btn-sm bg-[#8EA7FF] text-white">Logout</button>
-          //       </li>
-
-          //   </ul>
-          // </div>
-          //   </>:
-          //     <div className="dropdown dropdown-end mt-1">
-          //     <div
-          //       tabIndex={0}
-          //       role="button"
-          //       className=" tooltip"
-          //       data-tip={'Please login'}
-          //     >
-          //       <div className="w-10 rounded-full">
-          //         <img className="rounded-full"
-          //           alt="Tailwind CSS Navbar component"
-          //           src="https://i.ibb.co/9pt0k20/login.jpg"
-          //         />
-          //       </div>
-          //     </div>
-          //     <ul tabIndex={0} className="      dropdown-content bg-base-100    ">
-          //       <Link to="/login">
-          //         <li>
-          //           <button className="btn btn-sm bg-[#8EA7FF] text-white">Login</button>
-          //         </li>
-          //       </Link>
-          //     </ul>
-          //   </div>
+          
         }
       </div>
       <div>

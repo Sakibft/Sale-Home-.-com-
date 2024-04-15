@@ -17,7 +17,7 @@ const Home = () => {
           <h1></h1>
           <h1  className="text-2xl text-center font-bold animate__animated animate__pulse">
              
-            Discover a place you will love to live
+            Discover a place you will love to live !
           </h1>
          
           <p className="text-center">
