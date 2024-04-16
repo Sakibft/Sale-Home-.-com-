@@ -4,7 +4,7 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import UseAuth from "../Hooks/UseAuth";
 import { Helmet } from "react-helmet-async";
-import { ToastContainer,toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -18,78 +18,24 @@ const Login = () => {
   console.log(success);
   // email and password
   if (success) {
-    toast.success('Successfully login', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.success('Successfully Login')
   }
   if (error) {
-    toast.error(error, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.error(error); 
   }
   // google
   if(googleLogin){
-    toast.success('Successfully login with google', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.success('Successfully login with google'); 
   }
   if(googleError){
-    toast.error(error, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.error(error); 
   }
   //  github 
   if(githublogin){
-    toast.success('Successfully login with github', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.success('Successfully login with github'); 
   }
   if(githuberror){
-    toast.success( githuberror, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.success( githuberror); 
   }
 
   console.log(loginUser);
@@ -132,6 +78,7 @@ const Login = () => {
 
   return (
     <div>
+      <div><Toaster/></div>
       <Helmet>
         <title>sale home | login</title>
       </Helmet>
@@ -244,7 +191,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };

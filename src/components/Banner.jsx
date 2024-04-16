@@ -9,7 +9,7 @@ import '../../src/App.css'
  
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const Banner = () => {
   return (
@@ -22,8 +22,11 @@ const Banner = () => {
         pagination={{
           clickable: true,
         }}
+        autoplay={
+          {delay:3000}
+        }
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Navigation,Autoplay,Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>

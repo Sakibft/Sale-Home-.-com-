@@ -2,40 +2,22 @@ import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
-import { ToastContainer,toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import toast, { ToastBar, Toaster } from "react-hot-toast";
  
 
 const Register = () => {
-  const { createUser } = UseAuth();
+  const { createUser,updateUserProfile } = UseAuth();
 
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [sucess, setSuccess] = useState("");
   if (sucess) {
-    toast.success('Register Completed', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+    toast.success('Register completed !')
  
   }
   if (error) {
-    toast.error(error, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      }); 
+  toast.error(error)
   }
   console.log(error);
   console.log(sucess);
@@ -45,8 +27,11 @@ const Register = () => {
     setSuccess("");
     e.preventDefault();
     const form = new FormData(e.target);
+    const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
+    const photoURL = form.get("photo");
+    console.log(name,photoURL);
     if (password.length < 6) {
       setError("Password should be at least 6 characters");
       return;
@@ -60,9 +45,10 @@ const Register = () => {
       return;
     }
     console.log(password);
-    createUser(email, password)
+    createUser(email, password,name,photoURL)
       .then((result) => {
         setSuccess(result);
+        updateUserProfile(name,photoURL)
       })
       .catch((error) => {
         setError(error.message);
@@ -70,8 +56,10 @@ const Register = () => {
     console.log(email);
   };
 
+
   return (
     <div className="container mx-auto">
+      <div><Toaster/></div>
       <Helmet>
         <title>sale home | register</title>
       </Helmet>
@@ -175,7 +163,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import UseAuth from "../../Hooks/UseAuth";
 import ks from "../../assets/aldj.png";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 const UpdateProfile = () => {
   const { user,   updateUserProfile } = UseAuth();
   const [name, setName] = useState(user?.displayName || "");
@@ -13,16 +13,7 @@ const UpdateProfile = () => {
   const handleSave = () => {
  updateUserProfile(name,photo)
  .then(()=>{
-  toast.success('Successfully updated', {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-    }); 
+  toast.success('Successfully update!')
  })
  .catch(()=>{
   toast.error('here is some problem', {
@@ -43,6 +34,7 @@ const UpdateProfile = () => {
 
   return (
     <div className="container mx-auto">
+      <div><Toaster/></div>
       <Helmet>
         <title>sale home-up/profile</title>
       </Helmet>
@@ -106,7 +98,7 @@ const UpdateProfile = () => {
           </div>
         </div>
       </div>
-      <ToastContainer></ToastContainer>
+       
     </div>
   );
 };
