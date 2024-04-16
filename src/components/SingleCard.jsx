@@ -31,7 +31,7 @@ const SingleCard = ({ item }) => {
   return (
     <div className="container mx-auto ">
       <div>
-        <div className="card lg:w-full h-[500px] bg-base-100 shadow-xl transition duration-300 transform hover:scale-105">
+        <div className="card lg:w-full h-[500px] bg-base-100 shadow-xl transition duration-300 transform hover:scale-105 border-2 hover:border-[#8EA7FF]">
           <figure>
             <img src={image_url} alt="Shoes" />
           </figure>

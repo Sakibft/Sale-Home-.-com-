@@ -8,6 +8,7 @@ const Nav = () => {
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
   const { user, logOut } = UseAuth();
+  console.log(user);
   if (success) {
     return <Link to="/"></Link>;
   }

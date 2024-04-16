@@ -6,7 +6,7 @@ const Profile = () => {
   const {user} = UseAuth();
   return (
     <div>
-         <div className="mx-auto my-20   space-y-8 rounded-2xl  px-6 py-8 shadow-md    w-96 border hover:border-[#8EA7FF] duration-1000">
+         <div className="mx-auto my-20   space-y-8 rounded-2xl  px-6 py-8 shadow-md    w-96 border-2  hover:border-[#8EA7FF] duration-1000">
         {/* profile image & bg  */}
         <div className="relative ">
             <img width={350} height={150} className="h-[150px] w-[350px] rounded-2xl bg-gray-500" src="https://source.unsplash.com/350x150/?northern lights" alt="card navigate ui" />

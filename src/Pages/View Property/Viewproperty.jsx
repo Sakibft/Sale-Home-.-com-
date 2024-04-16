@@ -33,7 +33,7 @@ const Viewproperty = () => {
      <div  data-aos="fade-up" data-aos-duration="1000" className="container mx-auto flex justify-center items-center mb-28 mt-8 ">
   
       
-      <div className="card lg:card-side bg-base-100 shadow-xl md:w-full w-full  border  hover:border-blue-300 duration-1000">
+      <div className="card lg:card-side bg-base-100 shadow-xl md:w-full w-full  border-2  hover:border-[#8EA7FF] duration-1000">
         <figure data-aos="fade-right"  data-aos-delay="100"
     data-aos-duration="1000">
           <img

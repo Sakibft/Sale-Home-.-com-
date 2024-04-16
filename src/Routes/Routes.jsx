@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import AboutPrivate from "./AboutPrivate";
 import UpPrivate from "./UpPrivate";
 import Profile from "../Pages/Profile/Profile";
+import ProfilePrivate from "./ProfilePrivate";
 
 const router = createBrowserRouter([
   {
@@ -57,7 +58,9 @@ const router = createBrowserRouter([
 },
 {
   path:'/profile',
-  element:<Profile></Profile>
+  element:<ProfilePrivate>
+    <Profile></Profile>
+  </ProfilePrivate>
 }
     ]
   },

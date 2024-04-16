@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../../components/Banner";
 import { useLoaderData } from "react-router-dom";
 import SingleCard from "../../components/SingleCard";
+import Hcard from "../../components/Hcard";
 
 const Home = () => {
   const homeData = useLoaderData();
@@ -11,6 +12,7 @@ const Home = () => {
       <Helmet>
         <title>Sale ~ Home</title>
       </Helmet>
+      {/* banner */}
       <Banner></Banner>
       <div className="container mx-auto flex justify-center mt-12">
         <div>
@@ -29,11 +31,15 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto mt-4 grid lg:grid-cols-4 md:grid-cols-2  gap-4 mb-12 p-1">
+      {/* card */}
+      <div className="container mx-auto mt-4 grid lg:grid-cols-4 md:grid-cols-2  gap-4 mb-8 p-1">
         {homeData.map((item) => (
           <SingleCard key={item.id} item={item}></SingleCard>
         ))}
       </div>
+      {/* extra */}
+      <Hcard></Hcard>
+
     </div>
   );
 };
