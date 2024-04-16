@@ -56,6 +56,16 @@ const Nav = () => {
             ? "text-white  lg:px-2 py-2 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
+        to="/profile"
+      >
+        Profile
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "text-white  lg:px-2 py-2 bg-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
+        }
         to="/about"
       >
         About Us
