@@ -52,6 +52,10 @@ const unSubsCribe = onAuthStateChanged(auth,currentUser => {
     setUser(currentUser)
     setLoading(false);
   }
+  else{
+    setUser(null)
+    setLoading(false)
+  }
  });
  return ()  => {
   unSubsCribe();

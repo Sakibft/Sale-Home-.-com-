@@ -7,7 +7,7 @@ const Nav = () => {
  
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
-  const { user, logOut,loading } = UseAuth();
+  const { user, logOut } = UseAuth();
   if (success) {
     return <Link to="/"></Link>;
   }
@@ -19,7 +19,8 @@ const Nav = () => {
   const handleLogOut = () => {
     logOut()
       .then((result) => {
-        setSuccess(result.user);
+        setSuccess(result);
+        console.log(result);
         
       })
       .catch((error) => {
