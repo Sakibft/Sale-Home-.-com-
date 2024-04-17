@@ -12,14 +12,14 @@ const Hcard = () => {
         <IoMdArrowDown className="mt-[6px]" /> More recommended homes
       </h1>
       <div>
-        <div className="bg-green-100 p-6">
+        <div className="  p-6">
           <div className="grid lg:grid-cols-2 gap-1 container mx-auto">
             {/* 1 */}
             <div  
             data-aos="fade-down" 
             data-aos-delay="100"
             data-aos-duration="1000"
-            className="card lg:card-side md:card-side bg-base-100 shadow-xl   border-2  ">
+            className="card lg:card-side md:card-side bg-base-100 shadow-xl   border-2 ">
               <figure>
                 <img className="w-96" src={ikd} alt="Album" />
               </figure>
@@ -110,7 +110,7 @@ const Hcard = () => {
           </div>
         </div>
       </div>
-      <div className="border-4 border-[#8EA7FF]"></div>
+      <div className="border-2 border-[#8EA7FF]"></div>
     </div>
   );
 };

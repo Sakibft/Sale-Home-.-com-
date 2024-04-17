@@ -1,28 +1,29 @@
 [
   {
-    "estate_title": "Luxury Single-Family Home with Panoramic Views",
+    "estate_title": "Home Designed With A Minimalist Style Exuding Luxury And Elegance",
     "id": 1,
     "segment_name": "Residential",
-    "description": "This exquisite single-family home offers unparalleled luxury and stunning panoramic views. Featuring spacious living areas, gourmet kitchen, private pool, and lush landscaping, this home is perfect for those seeking the ultimate in comfort and elegance.",
-    "price": "$1,500,000",
-    "Status": "Sale",
-    "Area": "4000 sqft",
-    "location": "123 Main Street, Anytown, USA",
-    "facilities": ["living room", "swimming pool", "kitchen", "panoramic views"],
-    "image_url": "https://i.ibb.co/RBtbz0n/cottage-2955582-1280.jpg"
-  },
-  {
-    "estate_title": "Modern Townhouse in Prime Location",
-    "id": 2,
-    "segment_name": "Residential",
-    "description": "This modern townhouse offers contemporary design and convenience in a prime location. Featuring open floor plan, rooftop terrace, attached garage, and state-of-the-art appliances, this townhouse is ideal for urban living.",
-    "price": "$750,000",
+    "description": "Designed by Zherow Architects, Faza Home is located in the town of Vadakara, Kerala. With a site area of 17 Cents and a built-up area of 3150 sq.ft, the 4-bedroom residence- Faza Home designed with a minimalist style exuding luxury and elegance. The brief given by the client was to design a home that was open and facilitated natural ventilation into all areas.",
+    "price": "$50,000",
     "Status": "Sale",
     "Area": "2500 sqft",
     "location": "456 Oak Street, Cityville, USA",
     "facilities": ["living room", "rooftop terrace", "attached garage", "modern kitchen"],
-    "image_url": "https://i.ibb.co/L6scvtt/istockphoto-1442148484-2048x2048.jpg"
+    "image_url": "https://i.ibb.co/3dsXxn7/Modern-Mansion-Design-3-9.webp"
   },
+  {
+    "estate_title": "A Guide to the Types of Homes You Can Buy",
+    "id": 2,
+    "segment_name": "Residential",
+    "description": "Many homebuyers have some idea of what they’re looking for in their dream home. You may have a specific location or design in mind. But what about the type of home? Are you looking for something single-family or multi-family? ",
+    "price": "$1500/month",
+    "Status": "Rent",
+    "Area": "1200 sqft",
+    "location": "101 Palm Drive, Senior Haven, USA",
+    "facilities": ["living room", "wellness center", "social activities", "on-site dining"],
+    "image_url":"https://i.ibb.co/YT7ScSC/preparing-to-sell-4.jpg"
+  },
+ 
   {
     "estate_title": "Luxury Apartment with Spectacular Views",
     "id": 3,
@@ -40,11 +41,59 @@
     "id": 4,
     "segment_name": "Residential",
     "description": "This senior living community offers a vibrant and engaging lifestyle for retirees. Featuring spacious apartments, wellness center, social activities, and on-site dining, residents can enjoy a fulfilling retirement experience.",
-    "price": "$4,500/month",
-    "Status": "Rent",
+    "price": "$4,500",
+    "Status": "Sale",
     "Area": "1200 sqft",
     "location": "101 Palm Drive, Senior Haven, USA",
     "facilities": ["living room", "wellness center", "social activities", "on-site dining"],
+    "image_url": "https://i.ibb.co/nkrM0dj/414541677.jpg"
+  },
+  {
+    "estate_title": "Modern Townhouse in Prime Location",
+    "id": 5,
+    "segment_name": "Residential",
+    "description": "This modern townhouse offers contemporary design and convenience in a prime location. Featuring open floor plan, rooftop terrace, attached garage, and state-of-the-art appliances, this townhouse is ideal for urban living.",
+    "price": "$320,000/month",
+    "Status": "Rent",
+    "Area": "2500 sqft",
+    "location": "456 Oak Street, Cityville, USA",
+    "facilities": ["living room", "rooftop terrace", "attached garage", "modern kitchen"],
     "image_url": "https://i.ibb.co/XyFmSsk/pexels-pixabay-164558.jpg"
+  },
+  {
+    "estate_title": "Transforming a home into an experience",
+    "id": 6,
+    "segment_name": "Residential",
+    "description": "feature a combination of elegance and rustic country styling. Often built with stone or brick, natural warm tones are carried throughout.",
+    "price": "$11500",
+    "Status": "Sale",
+    "Area": "1423sqft",
+    "location": "101 Palm Drive, Senior Haven, USA",
+    "facilities": ["living room", "wellness center", "social activities", "on-site dining"],
+    "image_url":"https://i.ibb.co/djCNc98/s.webp"
+  },
+  {
+    "estate_title": "Costs to Know About When Purchasing a New Home",
+    "id": 7,
+    "segment_name": "Residential",
+    "description": "Builders often require a deposit, which can range from 5-20% of the home's value, depending on the builder's policies and the cost of the home. This deposit helps cover building materials, contractor labor, the land cost, and permits.",
+    "price": "$3,000/month",
+    "Status": "Rent",
+    "Area": "2500 sqft",
+    "location": "456 Oak Street, Cityville, USA",
+    "facilities": ["living room", "rooftop terrace", "attached garage", "modern kitchen"],
+    "image_url": "https://i.ibb.co/L6scvtt/istockphoto-1442148484-2048x2048.jpg"
+  },
+  {
+    "estate_title": "Luxury Single-Family Home with Panoramic Views",
+    "id": 8,
+    "segment_name": "Residential",
+    "description": "This exquisite single-family home offers unparalleled luxury and stunning panoramic views. Featuring spacious living areas, gourmet kitchen, private pool, and lush landscaping, this home is perfect for those seeking the ultimate in comfort and elegance.",
+    "price": "$1,500,000",
+    "Status": "Sale",
+    "Area": "4000 sqft",
+    "location": "123 Main Street, Anytown, USA",
+    "facilities": ["living room", "swimming pool", "kitchen", "panoramic views"],
+    "image_url": "https://i.ibb.co/RBtbz0n/cottage-2955582-1280.jpg"
   }
 ]

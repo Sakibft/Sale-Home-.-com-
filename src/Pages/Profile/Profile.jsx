@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import UseAuth from "../../Hooks/UseAuth";
 
  
@@ -6,6 +7,9 @@ const Profile = () => {
   const {user} = UseAuth();
   return (
     <div>
+           <Helmet>
+        <title>sale home | profile</title>
+      </Helmet>
          <div className="mx-auto my-20   space-y-8 rounded-2xl  px-6 py-8 shadow-md    w-96 border-2  hover:border-[#8EA7FF] duration-1000">
         {/* profile image & bg  */}
         <div className="relative ">

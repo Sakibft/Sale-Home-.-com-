@@ -72,7 +72,7 @@ const Footer = () => {
             <div className="mt-2">
             <h1 className="flex gap-2 ">Number : 01740228022 <LiaPhoneSolid className="mt-1" /> </h1>
             <h1 className="flex gap-2">email : ssar96540@gmail.com <HiOutlineMail className="mt-2" /> </h1>
-            <h1 className="flex gap-2">location : Dhaka,Narshingdi,Shibpur <SlLocationPin className="mt-1" /></h1>
+            <h1 className="flex gap-2">Office : Dhaka,Narshingdi,Shibpur <SlLocationPin className="mt-1" /></h1>
             </div>
           </nav>
         </div>
