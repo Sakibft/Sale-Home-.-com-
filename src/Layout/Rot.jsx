@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Rot = () => {
   return (
-    <div>
+    <div className="md:p-0 p-2">
         <Nav></Nav>
       <Outlet></Outlet>
       <Footer></Footer>

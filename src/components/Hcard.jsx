@@ -12,7 +12,7 @@ const Hcard = () => {
         <IoMdArrowDown className="mt-[6px]" /> More recommended homes
       </h1>
       <div>
-        <div className="  p-6">
+        <div>
           <div className="grid lg:grid-cols-2 gap-1 container mx-auto">
             {/* 1 */}
             <div  

@@ -23,13 +23,28 @@ const Banner = () => {
         pagination={{
           clickable: true,
         }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000 }}
         navigation={true}
-        modules={[Navigation, Autoplay, Pagination]}
+        modules={[Navigation,   Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="slide slide1"></div>
+          <div className="slide slide1">
+            <div>
+              <h1 className="text-white text-center md:text-4xl text-2xl font-bold">
+                Discover information about a potential new  home <br />and subsequently
+                make a purchase.
+              </h1>
+              <div className="w-full flex justify-center items-center mt-4">
+                <label className="input input-bordered flex rounded-full justify-between items-center gap-2 border-2 hover:border-[#8EA7FF] ">
+                  <input type="text" className="grow " placeholder="Search" />
+                  <span className="btn rounded-full  bg-[#8EA7FF] text-white hover:bg-[#8EA7FF] ">
+                    Search
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide slide2"></div>

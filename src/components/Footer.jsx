@@ -1,5 +1,5 @@
-import { BsDot } from "react-icons/bs";
-import { IoHome } from "react-icons/io5";
+ 
+ 
 import ksd from "../assets/undraw_cabin_hkfr.svg";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";

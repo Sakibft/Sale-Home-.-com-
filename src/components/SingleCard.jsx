@@ -15,7 +15,8 @@ import { Link } from "react-router-dom";
 </div> */
 }
 
-const SingleCard = ({ item }) => {
+const SingleCard = ({ item,index }) => {
+  console.log(index);
   const {
     id,
     estate_title,
@@ -29,8 +30,12 @@ const SingleCard = ({ item }) => {
     facilities,
   } = item;
   return (
-    <div className="container mx-auto ">
-      <div>
+    <div
+    data-aos="fade-right"
+    data-aos-duration={index*200}
+    data-aos-delay={index*100}
+    className="container mx-auto ">
+     
         <div className="card lg:w-full h-[500px] bg-base-100 shadow-xl transition duration-300 transform hover:scale-105 border-2 hover:border-[#8EA7FF]">
           <figure>
             <img src={image_url} alt="Shoes" />
@@ -61,7 +66,7 @@ const SingleCard = ({ item }) => {
             </div>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 };

@@ -16,10 +16,10 @@
   }
 }
 
- .slide3 {
+ .slide2 {
   background-image: url(./assets/img1.jpg);
  }
- .slide2 {
+ .slide5 {
   background-image: url(./assets/img2.jpg);
  }
  .slide1 {
@@ -28,6 +28,6 @@
  .slide4 {
   background-image:url(./assets/img4.jpg);
  }
- .slide5 {
+ .slide3 {
   background-image: url(./assets/img5.jpg);
  }
