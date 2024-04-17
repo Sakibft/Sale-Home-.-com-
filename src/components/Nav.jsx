@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
 import { useState } from "react";
 import ig from "../assets/alskd.png";
+import { BiLogIn } from "react-icons/bi";
 
 const Nav = () => {
- 
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
   const { user, logOut } = UseAuth();
@@ -14,7 +14,7 @@ const Nav = () => {
   }
   console.log(success);
   console.log(error);
- 
+
   console.log(user?.photoURL);
   // console.log(user);
   const handleLogOut = () => {
@@ -22,7 +22,6 @@ const Nav = () => {
       .then((result) => {
         setSuccess(result);
         console.log(result);
-        
       })
       .catch((error) => {
         setError(error.message);
@@ -95,7 +94,7 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className=" dropdown-content  z-[1]   rounded-box flex w-48  justify-between"
+            className=" dropdown-content  z-[10]   rounded-box  w-28    bg-white flex flex-col justify-center items-center shadow-xl gap-y-1 p-1"
           >
             <li>
               <NavLink
@@ -128,6 +127,18 @@ const Nav = () => {
                     ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold md:text-xl  "
                     : "font-semibold md:text-xl  "
                 }
+                to="/profile"
+              >
+                Profile
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#8EA7FF]  border px-2 py-1 border-[#8EA7FF] rounded-md   font-semibold md:text-xl  "
+                    : "font-semibold md:text-xl  "
+                }
                 to="/about"
               >
                 About
@@ -136,7 +147,7 @@ const Nav = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-           Sale <span className="text-[#8EA7FF]">~</span> Home{" "}
+          Sale <span className="text-[#8EA7FF]">~</span> Home{" "}
         </a>
       </div>
       <div className="navbar-center hidden md:flex">
@@ -144,57 +155,43 @@ const Nav = () => {
       </div>
       <div className="navbar-end">
         {/* dainami login logout */}
-    
-        {
-          user ? (
-            <div className="dropdown dropdown-hover">
-              <div tabIndex={0} role="button" className=" m-1">
-             <div className="w-10 border hover:border-blue-500 rounded-full">
-             <img  className="rounded-full w-full"
-                  src={user?.photoURL}
-                  alt="nai"
-                />
 
-             </div>
-              </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content z-[10] menu shadow bg-base-100 rounded-box w-32 "
-              >
-                    <li className=" rounded-md bg-[#8EA7FF] text-white">
-                  <p>{user?.displayName}</p>
-                </li>
-                <li>
-                <button onClick={handleLogOut} className="btn btn-sm bg-[#8EA7FF] text-white w-16">Logout</button>
-                </li>
-            
-               
-              </ul>
+        {user ? (
+          <div className="  flex justify-center items-center gap-2">
+              <div className="pointer group relative mx-auto  flex   w-max justify-center">
+              <div className="w-10 border hover:border-blue-500 rounded-full">
+                  <img
+                    className="rounded-full w-full"
+                    src={user?.photoURL}
+                    alt="nai"
+                  />
+                </div>
+            {/* Hover Text */}
+            <div className="absolute -bottom-12 cursor-pointer whitespace-nowrap opacity-0 duration-500 hover:hidden group-hover:-bottom-16 group-hover:opacity-100 z-10 ">
+            <p className=" rounded-md bg-[#8EA7FF] text-white p-2" >
+                    
+                    {user?.displayName} 
+                     </p>
+                <span className="absolute -top-2 left-[50%] h-0 w-0 -translate-x-1/2 -rotate-[45deg] border-b-[20px] border-r-[20px] border-b-transparent border-r-[#8EA7FF]  shadow-[0px_0px_10px_0px_#8EA7FF]"></span>
             </div>
-          ) : (
-            <div className="dropdown dropdown-hover">
-              <div tabIndex={0} role="button" className=" m-1">
-            <div className="w-10 ">
-            <img  className="rounded-full "
-                    alt="Tailwind CSS Navbar component"
-                    src="https://i.ibb.co/9pt0k20/login.jpg"/>
-            </div>
-              </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content z-[10] menu  shadow bg-base-100 rounded-box "
-              >
-                  <Link to="/login">
-                  <li>
-                   <button className="btn btn-sm bg-[#8EA7FF] text-white">Login</button>
-                 </li>
-                 </Link>
-               
-              </ul>
-            </div>
-          )
-          
-        }
+            {/* Hover button */}
+        </div>
+           
+           
+            <button
+              onClick={handleLogOut}
+              className="btn btn-sm bg-[#8EA7FF] text-white w-16  "
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div className="dropdown dropdown-hover">
+            <button className="btn w-24 bg-[#8EA7FF] text-white hover:bg-[#8EA7FF]">
+              <BiLogIn className="text-lg" /> Login
+            </button>
+          </div>
+        )}
       </div>
       <div>
         <div className="absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
