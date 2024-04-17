@@ -10,7 +10,7 @@ const Profile = () => {
            <Helmet>
         <title>sale home | profile</title>
       </Helmet>
-         <div className="mx-auto my-20   space-y-8 rounded-2xl  px-6 py-8 shadow-md    w-96 border-2  hover:border-[#8EA7FF] duration-1000">
+         <div className="mx-auto my-20   space-y-8 rounded-2xl  px-6 py-8 shadow-xl   w-96 border-2  hover:border-[#8EA7FF] duration-1000">
         {/* profile image & bg  */}
         <div className="relative ">
             <img width={350} height={150} className="h-[150px] w-[350px] rounded-2xl bg-gray-500" src="https://source.unsplash.com/350x150/?northern lights" alt="card navigate ui" />
@@ -34,7 +34,7 @@ const Profile = () => {
             </div>
         </div>
         <div className="flex justify-center">
-            <button className="t w-[80%] rounded-full py-2 font-medium text-gray-400   duration-500  hover:scale-95 hover:bg-[#8EA7FF] hover:text-white hover:shadow-xl dark:shadow-[0px_2px_8px_0px_rgba(0,0,0,0.8)]">Follow</button>
+            <button className="t w-[80%] rounded-full py-2 font-medium     duration-500  hover:scale-95 bg-[#8EA7FF] text-white hover:shadow-xl dark:shadow-[0px_2px_8px_0px_rgba(0,0,0,0.8)]">Follow</button>
         </div>
       </div>
     </div>

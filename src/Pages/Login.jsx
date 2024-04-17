@@ -5,7 +5,6 @@ import { IoMdEyeOff } from "react-icons/io";
 import UseAuth from "../Hooks/UseAuth";
 import { Helmet } from "react-helmet-async";
 import toast, { Toaster } from "react-hot-toast";
-import { FaGoogle } from "react-icons/fa";
 import { VscGithub } from "react-icons/vsc";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { RiFacebookCircleLine } from "react-icons/ri";
@@ -13,33 +12,33 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [googleLogin,setGoogleLogin]=useState("");
-  const [googleError,setGoogleError]=useState("");
-  const [githublogin,setGithubLogin]=useState("");
-  const [githuberror,setGithubError]=useState("");
+  const [googleLogin, setGoogleLogin] = useState("");
+  const [googleError, setGoogleError] = useState("");
+  const [githublogin, setGithubLogin] = useState("");
+  const [githuberror, setGithubError] = useState("");
   const { loginUser, loginWithGitHub, loginWithGoogle } = UseAuth();
   console.log(error);
   console.log(success);
   // email and password
   if (success) {
-    toast.success('Successfully Login')
+    toast.success("Successfully Login");
   }
   if (error) {
-    toast.error(error); 
+    toast.error(error);
   }
   // google
-  if(googleLogin){
-    toast.success('Successfully login with google'); 
+  if (googleLogin) {
+    toast.success("Successfully login with google");
   }
-  if(googleError){
-    toast.error(error); 
+  if (googleError) {
+    toast.error(error);
   }
-  //  github 
-  if(githublogin){
-    toast.success('Successfully login with github'); 
+  //  github
+  if (githublogin) {
+    toast.success("Successfully login with github");
   }
-  if(githuberror){
-    toast.success( githuberror); 
+  if (githuberror) {
+    toast.error(githuberror);
   }
 
   console.log(loginUser);
@@ -63,10 +62,10 @@ const Login = () => {
   const handleGitHub = () => {
     loginWithGitHub()
       .then((result) => {
-         setGithubLogin(result.user);
+        setGithubLogin(result.user);
       })
       .catch((error) => {
-         setGithubError(error.message);
+        setGithubError(error.message);
       });
   };
   // loginWithGoogle
@@ -82,15 +81,25 @@ const Login = () => {
 
   return (
     <div>
-      <div><Toaster/></div>
+      <div>
+        <Toaster />
+      </div>
       <Helmet>
         <title>sale home | login</title>
       </Helmet>
-      <div data-aos="fade-up"  data-aos-duration="1000" className="container mx-auto flex  h-[700px] items-center justify-center mb-10 mt-4 border hover:border-blue-300 duration-1000 rounded-2xl shadow-xl">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="container mx-auto flex  h-[700px] items-center justify-center mb-10 mt-4 border-2 hover:border-blue-300 duration-2000   rounded-2xl shadow-xl"
+      >
         <div className=" w-full overflow-hidden rounded-xl   flex justify-center items-center   lg:h-[80%] ">
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
-            <h2  data-aos="fade-down"  data-aos-duration="1000" className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]">
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              className="pb-8 text-center text-3xl font-bold text-[#8EA7E9]"
+            >
               Login Now !
             </h2>
             <form
@@ -151,29 +160,29 @@ const Login = () => {
               <div className="flex-1 h-px bg-gray-300"></div>
             </div>
             {/* Social icons */}
-            <div className="flex justify-center space-x-6 mt-3">
-            <button
-                onClick={handleGitHub}
-                aria-label="Log in with GitHub"
-                className="p-2 rounded-full hover:bg-[#8EA7E9]"
-              >
-               <VscGithub className="text-[#8EA7E9] hover:text-white text-3xl" />
-              </button>
+            <div className="flex justify-center space-x-8 mt-3">
               <button
                 onClick={handleGoogle}
                 aria-label="Log in with Google"
                 className="p-2 rounded-full hover:bg-[#8EA7E9]"
               >
-                <AiFillGoogleCircle className="text-[#8EA7E9] hover:text-white text-3xl"   />
+                <AiFillGoogleCircle className="text-[#8EA7E9] hover:text-white text-4xl" />
               </button>
-           
-
               <button
+                onClick={handleGitHub}
+                aria-label="Log in with GitHub"
+                className="p-3 rounded-full hover:bg-[#8EA7E9]"
+              >
+                <VscGithub className="text-[#8EA7E9] hover:text-white text-3xl" />
+              </button>
+
+               
+               <button
                 aria-label="Log in with Twitter"
                 className="p-3 rounded-full hover:bg-[#8EA7E9]"
               >
                 <RiFacebookCircleLine className="text-[#8EA7E9] hover:text-white text-3xl"/>
-              </button>
+              </button> 
             </div>
           </div>
         </div>

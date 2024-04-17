@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import UseAuth from "../Hooks/UseAuth";
 import { Helmet } from "react-helmet-async";
 import toast, { ToastBar, Toaster } from "react-hot-toast";
+import { FaArrowRight } from "react-icons/fa";
  
 
 const Register = () => {
@@ -63,7 +64,7 @@ const Register = () => {
       <Helmet>
         <title>sale home | register</title>
       </Helmet>
-      <div  data-aos="fade-up"  data-aos-duration="1000"  className="flex h-[700px] border hover:border-blue-300 rounded-xl items-center justify-center shadow-xl mb-8 ">
+      <div  data-aos="fade-up"  data-aos-duration="1000"  className="flex h-[700px] border-2 hover:border-blue-300 rounded-xl items-center justify-center shadow-xl mb-8 ">
         <div className="flex h-full w-full overflow-hidden rounded-xl shadow-md   ">
           {/* register design side  */}
           <div className="relative hidden h-full items-center justify-center bg-[#8EA7E9] md:flex md:w-[60%] lg:w-[40%]">
@@ -73,16 +74,16 @@ const Register = () => {
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full  bg-gradient-to-br from-white via-[#9eb6f8] to-[#6585dd]"></div>
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-medium text-white/80">
-                Welcome Back to Sale ~ Home
+                Welcome to you Sale ~ Home
               </h2>
-              <p className="animate-pulse text-sm text-white/60">
-                Please Enter You Information
+              <p className="animate-pulse  text-white">
+                Please fill up this form  
               </p>
             </div>
           </div>
           {/* input side  */}
           <div className="flex w-full flex-col justify-center bg-white py-10 lg:w-[60%]">
-            <h2  data-aos="fade-down"  data-aos-duration="1000"  className="pb-8 text-center text-3xl font-bold text-[#8EA7E9] ">
+            <h2  data-aos="fade-up"  data-aos-duration="2000"  className="pb-8 text-center text-3xl font-bold text-[#8EA7E9] ">
               Register Here
             </h2>
             <form

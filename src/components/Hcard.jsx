@@ -13,7 +13,7 @@ const Hcard = () => {
       </h1>
       <div>
         <div>
-          <div className="grid lg:grid-cols-2 gap-1 container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-1 container mx-auto mb-6">
             {/* 1 */}
             <div  
             data-aos="fade-down" 
@@ -110,7 +110,7 @@ const Hcard = () => {
           </div>
         </div>
       </div>
-      <div className="border-2 border-[#8EA7FF]"></div>
+      {/* <div className="border border-[#8EA7FF]"></div> */}
     </div>
   );
 };
