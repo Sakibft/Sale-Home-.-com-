@@ -76,7 +76,7 @@ const Nav = () => {
     <div className="navbar bg-base-100 mt-5 container mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="  bg-white hover:bg-white lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -146,8 +146,8 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl">
-          Sale <span className="text-[#8EA7FF]">~</span> Home{" "}
+        <a className=" font-bold  ml-2 text-2xl">
+          Sale <span className="text-[#8EA7FF]">~</span> Home 
         </a>
       </div>
       <div className="navbar-center hidden md:flex">
