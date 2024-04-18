@@ -180,17 +180,21 @@ const Nav = () => {
            
             <button
               onClick={handleLogOut}
-              className="btn btn-sm bg-[#8EA7FF] text-white w-16  "
+              className="btn text-lg   bg-[#8EA7FF] text-white w-24 "
             >
-              Logout
+               
+              Logout 
+              
             </button>
           </div>
         ) : (
+         <Link to='/login'>
           <div className="dropdown dropdown-hover">
             <button className="btn w-24 bg-[#8EA7FF] text-white hover:bg-[#8EA7FF]">
               <BiLogIn className="text-lg" /> Login
             </button>
           </div>
+         </Link>
         )}
       </div>
       <div>
